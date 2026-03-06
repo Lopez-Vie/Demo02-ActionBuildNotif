@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "🚀 Deployment fail !"
-          html-template: "<h1>Your deployment is not good my friends</h1>!" 
+          html-template: "<h1>Your deployment is not good my friends 💥 </h1>!" 
           # html_body: "<h1>Et merde ! Ca a foiré !</h1>"
         
       - name : Buildation du code TS vers le JS
