@@ -8,9 +8,18 @@ jobs:
     steps:
       - name: Verification des fichiers du runner
         run: ls -a -l
+
       - name: Clone du projet dans le runner (via actions/checkout)
         uses: actions/checkout@v6
+
       - name: Verification des fichiers après l'action "checkout"
         run: ls -a -l
 
+      - name: Installation de l'environnement Node.js
+        uses: actions/setup-node@v6
 
+      - name: Installation de dépendences (node_modules)
+        run: npm ci
+
+      - name: Lancement des tests unitaires
+        run: npm run test
