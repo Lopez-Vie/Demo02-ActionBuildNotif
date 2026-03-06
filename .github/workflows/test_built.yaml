@@ -1,0 +1,16 @@
+name: Test and Build
+
+on: [workflow_dispatch]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verification des fichiers du runner
+        run: ls -a -l
+      - name: Clone du projet dans le runner (via actions/checkout)
+        uses: actions/checkout@v6
+      - name: Verification des fichiers après l'action "checkout"
+        run: ls -a -l
+
+
